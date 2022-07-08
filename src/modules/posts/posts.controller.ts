@@ -67,3 +67,4 @@ export class PostsController {
         return 'Successfully deleted';
     }
 }
+

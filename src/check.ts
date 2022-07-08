@@ -1,5 +1,6 @@
 
 //services
+/*
 async processExclusionXlsFIle(file: any, draw_id: number, res: any, request: any) {
 
     var workbook = XLSX.readFile(file.path);
@@ -64,3 +65,4 @@ async processExclusionXlsFIle(file: any, draw_id: number, res: any, request: any
         }
 
     }
+    */
