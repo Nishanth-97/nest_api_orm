@@ -5,11 +5,14 @@ import { DatabaseModule } from './core/database/database.module';
 import { PostsService } from './modules/posts/posts.service';
 import { PostsController } from './modules/posts/posts.controller';
 import { postsProviders } from './modules/posts/posts.providers';
+import { FilesModule } from './modules/files/files.module';
 
 
 @Module({
   imports: [
     DatabaseModule,
+  //  PostsModule,
+    FilesModule
   ],
   controllers: [AppController,PostsController],
   providers: [AppService,PostsService, ...postsProviders],

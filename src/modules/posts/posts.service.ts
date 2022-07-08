@@ -10,20 +10,37 @@ export class PostsService {
     constructor(@Inject(POST_REPOSITORY) private readonly postRepository: typeof users) { }
 
     async create(post: PostDto): Promise<users[]> {
-        return await this.postRepository.bulkCreate<users>([ {
-                        id:11,
+        return await this.postRepository.bulkCreate<users>([ 
+            {
+                        id:13,
                         username: "arun",
                         firstname: "nishjks",
                         lastname: "anthskj",
                         email: "nish@gmskail.com",
                         mobile: "9876423425"
                  },
-                 { id:12,
+                 { id:14,
                         username: "kumar",
                         firstname: "nishjks",
                         lastname: "anthskj",
                         email: "nish@gmskail.com",
-                        mobile: "9876423425" },]);
+                        mobile: "9876423425" },
+                        {
+                            id:15,
+                            username: "arun",
+                            firstname: "nishjks",
+                            lastname: "anthskj",
+                            email: "nish@gmskail.com",
+                            mobile: "9876423425"
+                     },
+                     { id:16,
+                            username: "kumar",
+                            firstname: "nishjks",
+                            lastname: "anthskj",
+                            email: "nish@gmskail.com",
+                            mobile: "9876423425" },
+                    
+                    ]);
     }
     //  async  create(post: PostDto): Promise<users[]> {
     //     return await this.postRepository.bulkCreate([
