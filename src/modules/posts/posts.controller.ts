@@ -4,6 +4,7 @@ import { AuthGuard } from '@nestjs/passport';
 import { PostsService } from './posts.service';
 import { users as PostEntity } from './post.entity';
 import { PostDto } from './dto/post.dto';
+import { users } from './post.entity';
 
 @Controller('posts')
 export class PostsController {
@@ -31,7 +32,7 @@ export class PostsController {
 
    // @UseGuards(AuthGuard('jwt'))
     @Post()
-    async create(@Body() post: PostDto): Promise<PostEntity> {
+    async create(@Body() post: PostDto): Promise<users[]> {
         // create a new post and return the newly created post
         return await this.postService.create(post);
     }

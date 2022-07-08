@@ -9,7 +9,7 @@ import { postsProviders } from './modules/posts/posts.providers';
 
 @Module({
   imports: [
-    DatabaseModule,,
+    DatabaseModule,
   ],
   controllers: [AppController,PostsController],
   providers: [AppService,PostsService, ...postsProviders],

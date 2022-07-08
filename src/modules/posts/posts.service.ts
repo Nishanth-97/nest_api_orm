@@ -9,9 +9,48 @@ import { POST_REPOSITORY } from '../../core/constants';
 export class PostsService {
     constructor(@Inject(POST_REPOSITORY) private readonly postRepository: typeof users) { }
 
-    async create(post: PostDto): Promise<users> {
-        return await this.postRepository.create<users>({ ...post });
+    async create(post: PostDto): Promise<users[]> {
+        return await this.postRepository.bulkCreate<users>([ {
+                        id:11,
+                        username: "arun",
+                        firstname: "nishjks",
+                        lastname: "anthskj",
+                        email: "nish@gmskail.com",
+                        mobile: "9876423425"
+                 },
+                 { id:12,
+                        username: "kumar",
+                        firstname: "nishjks",
+                        lastname: "anthskj",
+                        email: "nish@gmskail.com",
+                        mobile: "9876423425" },]);
     }
+    //  async  create(post: PostDto): Promise<users[]> {
+    //     return await this.postRepository.bulkCreate([
+    //      {
+    //             id:7,
+    //             username: "kavin",
+    //             firstname: "nishjks",
+    //             lastname: "anthskj",
+    //             email: "nish@gmskail.com",
+    //             mobile: "9876423425"
+    //      },
+    //      { id:8,
+    //             username: "kavin",
+    //             firstname: "nishjks",
+    //             lastname: "anthskj",
+    //             email: "nish@gmskail.com",
+    //             mobile: "9876423425" },
+    
+    //     ]);
+    // }
+
+    // User.bulkCreate([
+    //     { firstName: "Nathan" },
+    //     { firstName: "Jack" },
+    //     { firstName: "John" },
+    //   ]).then(() => console.log("Users data have been saved"));
+
     async findAll(): Promise<users[]> {
   console.log("*******************************");
     console.log(users);
