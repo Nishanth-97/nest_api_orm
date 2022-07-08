@@ -6,15 +6,16 @@ import { PostsService } from './modules/posts/posts.service';
 import { PostsController } from './modules/posts/posts.controller';
 import { postsProviders } from './modules/posts/posts.providers';
 import { FilesModule } from './modules/files/files.module';
+import { FilesController } from './modules/files/files.controller';
 
 
 @Module({
   imports: [
     DatabaseModule,
   //  PostsModule,
-    FilesModule
+ //   FilesModule
   ],
-  controllers: [AppController,PostsController],
-  providers: [AppService,PostsService, ...postsProviders],
+  controllers: [AppController,PostsController,FilesController],
+  providers: [AppService,PostsService, ...postsProviders, FilesModule],
 })
 export class AppModule {}

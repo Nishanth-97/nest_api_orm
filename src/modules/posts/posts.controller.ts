@@ -9,7 +9,7 @@ import { diskStorage } from 'multer';
 import { extname } from 'path' ;
 @Controller('posts')
 export class PostsController {
-    constructor(private readonly postService: PostsService) { }
+    constructor(private readonly postService: PostsService, ) { }
 
     @Get()
     async findAll() {
